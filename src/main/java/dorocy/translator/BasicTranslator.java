@@ -5,7 +5,7 @@ import org.apache.commons.text.translate.CharSequenceTranslator;
 import org.apache.commons.text.translate.EntityArrays;
 import org.apache.commons.text.translate.LookupTranslator;
 
-public class BasicTranslator implements Translator{
+public class BasicTranslator extends Translator{
     public CharSequenceTranslator getTranslator() {
         return new AggregateTranslator(
                 new LookupTranslator(EntityArrays.BASIC_ESCAPE),

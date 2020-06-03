@@ -2,7 +2,10 @@ package dorocy.translator;
 
 import org.apache.commons.text.translate.CharSequenceTranslator;
 
-public interface Translator {
+public abstract class Translator {
 
-    CharSequenceTranslator getTranslator();
+    abstract protected CharSequenceTranslator getTranslator();
+    public String translate(String dirty){
+        return getTranslator().translate(dirty);
+    }
 }

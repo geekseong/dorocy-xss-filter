@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SecureTranslator implements Translator {
+public class SecureTranslator extends Translator {
 
     public CharSequenceTranslator getTranslator() {
         return new AggregateTranslator(
