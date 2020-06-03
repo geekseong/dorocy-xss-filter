@@ -10,7 +10,6 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
 
     private final XssFilter xssFilter;
 
-
     public XssHttpServletRequestWrapper(ServletRequest request) {
         super((HttpServletRequest)request);
         this.xssFilter = new XssFilter();
