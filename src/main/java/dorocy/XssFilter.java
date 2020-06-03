@@ -23,11 +23,7 @@ public class XssFilter {
     }
 
     public String doFilter(String dirty){
-        String clean = this.getTranslator().translate(dirty);
+        String clean = this.translator.translate(dirty);
         return clean == null ? null : clean.replaceAll("'", "&#39;");
-    }
-
-    private CharSequenceTranslator getTranslator(){
-        return this.translator.getTranslator();
     }
 }
