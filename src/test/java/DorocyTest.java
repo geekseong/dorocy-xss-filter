@@ -10,7 +10,7 @@ public class DorocyTest {
     @Test
     @Order(1)
     @DisplayName("Created_Translator_Validation_Test")
-    public void createdTranslatorValidation (){
+    public void createdTranslatorValidationTest (){
 
         //given
         TranslatorType basicType = TranslatorType.BASIC;
