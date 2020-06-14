@@ -6,16 +6,16 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import java.util.HashMap;
 import java.util.Map;
 
-public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
+public class XssServletRequestWrapper extends HttpServletRequestWrapper {
 
     private final XssFilter xssFilter;
 
-    public XssHttpServletRequestWrapper(ServletRequest request) {
+    public XssServletRequestWrapper(ServletRequest request) {
         super((HttpServletRequest)request);
         this.xssFilter = new XssFilter();
     }
 
-    public XssHttpServletRequestWrapper(ServletRequest request, XssFilter xssFilter) {
+    public XssServletRequestWrapper(ServletRequest request, XssFilter xssFilter) {
         super((HttpServletRequest)request);
         this.xssFilter = xssFilter;
     }
